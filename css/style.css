@@ -207,6 +207,7 @@ body{
 }
 
 .main__title div h2.main__title-views-back{
+    margin: 0;
     font-family: var(--myTitle);
     font-style: normal;
     position: absolute;
