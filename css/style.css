@@ -373,6 +373,145 @@ hr{
     opacity: 0.5 !important;
 }
 
+/*===== ESTILOS MÉTODOS DE PAGO (MOBILE) =====*/
+.main__payment{
+    margin: 0 20px;
+    width: auto;
+}
+
+.main__payment-title h2{
+    font-family: var(--myTitle);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 0.135em;
+    color: var(--myBlue);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main__payment-icons img{
+    transition: all 0.5s;
+}
+
+.main__payment-icons img:hover{
+    transform: scale(1.1);
+}
+
+/*===== ESTILOS FOOTER (MOBILE) =====*/
+footer{
+    background-color: var(--myRed);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Logo footer */
+.footer__logo{
+    position: absolute;
+    opacity: 0.7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer__logo img{
+    width: 55%;
+}
+
+/* Navegación footer */
+.footer__links{
+    position: relative;
+    z-index: 2;
+}
+
+.footer__links nav ul{
+    list-style: none;
+    font-family: var(--myTitle);
+    text-align: center;
+}
+
+.footer__links ul li{
+    margin-bottom: 10px;
+}
+
+.footer__links ul li:hover{
+    transform: scale(1.1);
+}
+
+.footer__links ul li a,
+.footer__social p{
+    font-family: var(--myTitle);
+    text-decoration: none;
+    color: var(--myGray);
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: all 0.5;
+    text-align: center;
+}
+
+/* Redes footer */
+.footer__social{
+    position: relative;
+    z-index: 2;
+}
+
+.footer__social div{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__social p{
+    margin-top: 10px;
+}
+
+.footer__social a{
+    text-decoration: none;
+    color: var(--myBlue);
+    border-radius: 50%;
+    border: 2px solid var(--myGray);
+    margin: 10px;
+    padding: 15px 18px;
+    background-color: var(--myBlue);
+    transition: all 0.5s;
+}
+
+.footer__social a:hover{
+    transform: translateY(-10px);
+    background-color: var(--myGray);
+    border: 2px solid var(--myBlue);
+}
+
+.footer__social a i{
+    font-size: 2rem;
+    color: var(--myGray);
+    transition: all 0.5s;
+}
+
+.footer__social a:hover i{
+    color: var(--myBlue);
+}
+
+.footer__social a img{
+    width: 3vw;
+    margin: 10px;
+    transition: all 0.5;
+}
+
+.footer__social a img:hover{
+    transform: scale(1.1);
+}
+
+/* Copyright del footer */
+.footer__copyright{
+    text-align: center;
+    color: var(--myGray);
+    font-family: var(--myTitle);
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
 /*===== ESTILOS MOBILE (OTHERS) - SM =====*/
 @media only screen and (min-width: 576px){
 
@@ -427,6 +566,13 @@ hr{
     /* Imagen banner index */
     .main__title-img{
         width: 40%;
+    }
+
+    /*===== ESTILOS FOOTER (MOBILE - OTHERS) =====*/
+
+    /* Logo footer */
+    .footer__logo img{
+        width: 35%;
     }
 }
 
@@ -512,6 +658,41 @@ hr{
         width: 85%;
     }
 
+    /*===== ESTILOS FOOTER (TABLET) =====*/
+    footer{
+        background-color: transparent;
+        background-image: url('../assets/img/footer.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* Elmentos del footer menos la sección de copyright */
+    .footer__container{
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Logo footer */
+    .footer__logo{
+        position: static;
+        opacity: 1;
+    }
+
+    .footer__logo img{
+        width: 100%;
+    }
+
+    /* Navegación footer */
+    .footer__links ul li a,
+    .footer__social p{
+        color: var(--myBlue);
+    }
+
+    /* Copyright del footer */
+    .footer__copyright{
+        padding-bottom: 0;
+    }
 }
 
 /*===== ESTILOS LG =====*/
@@ -611,6 +792,12 @@ hr{
     /* Botones "Ver más" */
     .main__button a{
         font-size: 3rem;
+    }
+
+    /*===== ESTILOS MÉTODOS DE PAGO (LG) =====*/
+
+    .main__payment-title h2{
+        font-size: 4rem;
     }
 
 }
