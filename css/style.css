@@ -249,6 +249,130 @@ body{
     0% { transform: translateY(-20px); }
 }
 
+/*===== ESTILOS SECCIÓN PRINCIPAL (MOBILE) =====*/
+
+/* Contenedor productos + título + botón*/
+.main__products{
+    margin: 0 20px;
+    width: auto;
+}
+
+/* Titulos seccion principal index */
+.main__products h2{
+    font-family: var(--myTitle);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 0.135em;
+    color: var(--myBlue);
+    margin-bottom: 10px;
+}
+
+/* Elineación diferente para segundo título del index */
+.main__products-on-sale{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__products-on-sale h2{
+    width: auto;
+}
+
+/* Contenedor producto individual */
+.main__products-container article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__products-container article img{
+    width: 90%;
+    margin: 10px;
+    transition: all 0.5s;
+}
+
+.main__products-container article:hover img{
+    transform: scale(1.1);
+}
+
+/* Textos de cada producto */
+.main__products-container article h3{
+    margin-top: 3px;
+    text-align: center;
+    font-family: var(--myTitle);
+    font-size: 2rem;
+    color: var(--myBlue);
+    letter-spacing: 0.135em;
+    font-weight: bold;
+}
+
+.main__products-container article h4{
+    font-family: var(--myText);
+    font-size: 1.5rem;
+    color: var(--myBlue);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.main__products-container article em,
+.main__products-container article strong{
+    font-size: 1.5rem;
+    color: var(--myBlue);
+}
+
+/* Botones "Ver más" */
+.main__button{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.main__button a{
+    background-image: linear-gradient(to bottom, var(--myBlue) , var(--myGray));
+    font-family: var(--myTitle);
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--myGray);
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: var(--myBlue) solid 2px;
+    transition: all 0.5s;
+    color: var(--myBlue);
+    text-shadow:
+        -1px    -1px    0   #FFFFFFFF,
+        0       -1px    0   #FFFFFFFF,
+        1px     -1px    0   #FFFFFFFF,
+        1px     0       0   #FFFFFFFF,
+        1px     1px     0   #FFFFFFFF,
+        0       1px     0   #FFFFFFFF,
+        -1px    1px     0   #FFFFFFFF,
+        -1px    0       0   #FFFFFFFF;
+}
+
+.main__button a:hover{
+    opacity: 0.8;
+    background-image: linear-gradient(to top, var(--myBlue) , var(--myBlue));
+    color: var(--myGray);
+    text-shadow:
+        -1px    -1px    0   var(--myBlue),
+        0       -1px    0   var(--myBlue),
+        1px     -1px    0   var(--myBlue),
+        1px     0       0   var(--myBlue),
+        1px     1px     0   var(--myBlue),
+        0       1px     0   var(--myBlue),
+        -1px    1px     0   var(--myBlue),
+        -1px    0       0   var(--myBlue);
+}
+
+/*===== ESTILOS HR (MOBILE) =====*/
+hr{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    opacity: 0.5 !important;
+}
+
 /*===== ESTILOS MOBILE (OTHERS) - SM =====*/
 @media only screen and (min-width: 576px){
 
@@ -352,14 +476,9 @@ body{
 
     /* Imagen banner index */
     .main__title-img{
-        width: 40%;
-    }
-
-    /* Imagen banner index */
-    .main__title-img{
         mix-blend-mode: overlay;
         right: 5px;
-        width: 38%;
+        width: 35%;
         opacity: 0.8;
     }
 
@@ -369,6 +488,30 @@ body{
         right: 10px;
         opacity: 1;
     }
+
+    /*===== ESTILOS SECCIÓN PRINCIPAL (TABLET) =====*/
+    
+    /* Textos de cada producto */
+    .main__products-container article h3{
+        font-size: 2.5rem;
+    }
+
+    /* Botones "Ver más" */
+    .main__button{
+        display: flex;
+        justify-content: center;
+        margin: 40px;
+    }
+
+    .main__button a{
+        font-size: 2.5rem;
+    }
+
+    /*=====ESTILOS HR (TABLET) =====*/
+    hr{
+        width: 85%;
+    }
+
 }
 
 /*===== ESTILOS LG =====*/
@@ -457,6 +600,19 @@ body{
     .main__title-img-above{
         right: 15px;
     }
+
+    /*===== ESTILOS SECCIÓN PRINCIPAL (LG) =====*/
+
+    /* Titulos seccion principal index */
+    .main__products h2{
+        font-size: 5rem;
+    }
+
+    /* Botones "Ver más" */
+    .main__button a{
+        font-size: 3rem;
+    }
+
 }
 
 /*===== ESTILOS DESKTOP - XL =====*/
