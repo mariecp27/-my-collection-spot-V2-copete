@@ -44,13 +44,13 @@
                             <a class="nav-link" href="./new-products.html">Nuevo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./on-sale-products.html">Ofertas</a>
+                            <a class="nav-link" href="./on-sale-products.html">Ofertas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./about-us.html">Sobre nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./contact-us.html">Contáctanos</a>
+                            <a class="nav-link active" href="./contact-us.html">Contáctanos</a>
                         </li>
                     </ul>
                 </div>
@@ -60,74 +60,100 @@
     <main>
         <!-- Banner -->
         <section class="main__title main__title-views main__title-views-long">
-            <div>
-                <h1>Contáctanos</h1>
-                <h2 class="main__title-views-back main__title-views-back-long">Contáctanos</h2>
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center p-0">
+                    <h1 class="col-12 m-0">Contáctanos</h1>
+                    <h2 class="main__title-views-back main__title-views-back-long">Contáctanos</h2>
+                </div>
             </div>
         </section>
         <!-- Form -->
-        <form class="main__form" action="" method="" data-aos="fade-up">
-            <div class="main__form-reason">
-                <label for="reason">Motivo</label>
-                <select name="reason" id="reason">
-                    <option value="" disabled selected>Selecciona la razón de tu contacto</option>
-                    <option value="purchase">Compra</option>
-                    <option value="complaint">Reclamo</option>
-                    <option value="request">Solicitud nuevos productos</option>
-                    <option value="feedback">Retroalimentación</option>
-                    <option value="business-opportunity">Trabaja con nosotros</option>
-                </select>
+        <form class="main__form container" action="" method="" data-aos="fade-up">
+            <div class="row justify-content-center m-0">
+                <div class="col-12 m-0 p-0">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected disabled value="">Selecciona la razón de tu contacto</option>
+                            <option value="purchase">Compra</option>
+                            <option value="complaint">Reclamo</option>
+                            <option value="request">Solicitud nuevos productos</option>
+                            <option value="feedback">Retroalimentación</option>
+                            <option value="business-opportunity">Trabaja con nosotros</option>
+                        </select>
+                        <label for="floatingSelect">Motivo</label>
+                    </div>
+                </div>
             </div>
-            <div class="main__form-name">
-                <label for="name">Nombre:</label>
-                <input type="text" name="name" id="name" placeholder="Nombre">
+            <div class="row gx-3 justify-content-between m-0">
+                <div class="col-12 col-md-5 m-0 p-0">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" placeholder="Nombre" name="name">
+                        <label for="name">Nombre</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 m-0 p-0">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="last-name" placeholder="Apellido" name="last-name">
+                        <label for="last-name">Apellido</label>
+                    </div>
+                </div>
             </div>
-            <div class="main__form-last-name">
-                <label for="last-name">Apellido:</label>
-                <input type="text" name="last-name" id="last-name" placeholder="Apellido">
+            <div class="row justify-content-center m-0">
+                <div class="col-12 m-0 p-0">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email">
+                        <label for="name">Email</label>
+                    </div>
+                </div>
             </div>
-            <div class="main__form-email">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="email@email.com">
+            <div class="row justify-content-center m-0">
+                <div class="col-12 m-0 p-0">
+                    <div class="form-floating">
+                        <textarea class="form-control form__textarea" placeholder="Tu comentario" id="message" cols="30" rows="10" name="message"></textarea>
+                        <label for="message">Mensaje</label>
+                    </div>
+                </div>
             </div>
-            <div class="main__form-message">
-                <label for="message">Mensaje:</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Tu comentario"></textarea>
-            </div>
-            <div class="form__button">
-                <button type="submit">Enviar <i class="fa-solid fa-circle-right"></i></button>
-                <button type="reset">Limpiar <i class="fa-solid fa-trash"></i></button>
+            <div class="row justify-content-center m-0 g-5">
+                <div class="col-5 m-0 p-0 d-flex justify-content-center form__button">
+                    <button type="submit">Enviar <i class="fa-solid fa-circle-right"></i></button>
+                </div>
+                <div class="col-5 m-0 p-0 d-flex justify-content-center form__button">
+                    <button type="reset">Limpiar <i class="fa-solid fa-trash"></i></button>
+                </div>
             </div>
         </form>
     </main>
     <footer>
-        <div class="footer__container">
-            <section class="footer__logo">
-                <img src="../assets/img/logo-small.png" alt="Logo">
-            </section>
-            <section class="footer__links">
-                <nav>
-                    <ul>
-                        <li><a href="./store.html">Tienda</a></li>
-                        <li><a href="./about-us.html">Sobre nosotros</a></li>
-                        <li><a href="./contact-us.html">Contáctanos</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="footer__social">
-                <p>Síguenos en redes</p>
-                <div>
-                    <a href="https://es-la.facebook.com/" target="_blank">
-                        <i class="fa-brands fa-square-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/es/" target="_blank">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                </div>
-            </section>
+        <div class="footer__container container-fluid">
+            <div class="row p-0 justify-content-between align-items-center">
+                <section class="footer__logo col-12 col-md-3 col-lg-1 p-0">
+                    <img src="../assets/img/logo-small.png" alt="Logo">
+                </section>
+                <section class="footer__links col-12 col-md-5 col-lg-7">
+                    <nav>
+                        <ul class="p-0">
+                            <li><a href="./store.html">Tienda</a></li>
+                            <li><a href="./about-us.html">Sobre nosotros</a></li>
+                            <li><a href="./contact-us.html">Contáctanos</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="footer__social col-12 col-md-4 col-lg-3 col-xl-2">
+                    <p>Síguenos en redes</p>
+                    <div>
+                        <a href="https://es-la.facebook.com/" target="_blank">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/es/" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
         </div>
         <section class="footer__copyright">
             <p>© 2022 My Collection Spot, todos los derechos reservados</p>

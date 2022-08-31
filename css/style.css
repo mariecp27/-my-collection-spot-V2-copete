@@ -419,6 +419,101 @@ hr{
     line-height: 1.5;
 }
 
+/*===== ESTILOS CONTÁCTANOS (MOBILE)=====*/
+
+.main__form{
+    width: 90%;
+}
+
+/* Label + Input */
+.main__form div{
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--myBlue);
+}
+
+/* Inputs form */
+.main__form div input,
+.main__form div select,
+.main__form div textarea{
+    border-radius: 20px;
+    border: var(--myBlue) solid 1px;
+    color: var(--myBlue);
+    resize: none;
+    font-size: 1.5rem;
+}
+
+.form-floating>.form-select,
+.form-floating>.form-control,
+.form-floating>.form-control:focus,
+.form-floating>.form-control:not(:placeholder-shown){
+    height: auto;
+    padding: 25px 10px 10px 10px;
+}
+
+.form-floating>.form__textarea,
+.form-floating>.form__textarea:focus{
+    height: auto;
+    padding-top: 30px;
+}
+
+.form-floating>.form-control::placeholder{
+    color: var(--myBlue);
+    font-style: italic;
+    opacity: 80%;
+    font-size: 1rem;
+}
+
+.main__form div input:focus,
+.main__form div select:focus,
+.main__form div textarea:focus,
+.form-control:focus{
+    outline: none;
+    border: var(--myRed) solid 1px;
+    box-shadow: none;
+}
+
+/* Botones form */
+.form__button button{
+    margin: 10px;
+    width: 80%;
+    background-image: linear-gradient(to bottom, var(--myBlue) , var(--myGray));
+    font-family: var(--myTitle);
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--myGray);
+    padding: 10px 0;
+    border-radius: 10px;
+    border: var(--myBlue) solid 2px;
+    transition: all 0.5s;
+    color: var(--myBlue);
+    text-shadow:
+        -1px    -1px    0   #FFFFFFFF,
+        0       -1px    0   #FFFFFFFF,
+        1px     -1px    0   #FFFFFFFF,
+        1px     0       0   #FFFFFFFF,
+        1px     1px     0   #FFFFFFFF,
+        0       1px     0   #FFFFFFFF,
+        -1px    1px     0   #FFFFFFFF,
+        -1px    0       0   #FFFFFFFF;
+}
+
+.form__button button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-image: linear-gradient(to top, var(--myBlue) , var(--myBlue));
+    color: var(--myGray);
+    text-shadow:
+        -1px    -1px    0   var(--myBlue),
+        0       -1px    0   var(--myBlue),
+        1px     -1px    0   var(--myBlue),
+        1px     0       0   var(--myBlue),
+        1px     1px     0   var(--myBlue),
+        0       1px     0   var(--myBlue),
+        -1px    1px     0   var(--myBlue),
+        -1px    0       0   var(--myBlue);
+}
+
 /*===== ESTILOS FOOTER (MOBILE) =====*/
 footer{
     background-color: var(--myRed);
@@ -681,6 +776,11 @@ footer{
         width: 85%;
     }
 
+    /*===== ESTILOS CONTÁCTANOS (TABLET)=====*/
+    .main__form{
+        width: 70%;
+    }
+
     /*===== ESTILOS FOOTER (TABLET) =====*/
     footer{
         background-color: transparent;
@@ -820,6 +920,15 @@ footer{
         font-size: 4rem;
     }
 
+    /*===== ESTILOS CONTÁCTANOS (LG)=====*/
+    .main__form{
+        width: 50%;
+    }
+
+    /* Botones form */
+    .form__button button{
+        width: 60%;
+    }
 }
 
 /*===== ESTILOS DESKTOP - XL =====*/
