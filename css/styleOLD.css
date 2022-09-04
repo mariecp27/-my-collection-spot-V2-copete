@@ -1,0 +1,942 @@
+/* Paleta de colores y fuente seleccionadas */
+:root{
+    --myBlue: #011627;
+    --myGray: #FDFFFC;
+    --myRed: #F71735;
+    --myBlueGreen: #41EAD4;
+    --myTitle: 'Bebas Neue', cursive;
+    --myText: 'Lato', sans-serif;
+}
+
+/* Normalización de estilos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Permite controlar el tamaño de fuente en rem: 1rem = 10px y fondo de la página*/
+html{
+    font-size: 62.5%;
+    width: 100vw;
+    min-height: 100vh;
+    background: url('../assets/img/background.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: var(--myText);
+    overflow-x: hidden;
+}
+
+.html__views{
+    background-image: url('../assets/img/backgroud-views.svg');
+}
+
+body{
+    background-color: transparent;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/*===== ESTILOS BASE (MOBILE - XM) =====*/
+
+/*===== ESTILOS NAV (MOBILE) =====*/
+.header__nav .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Logo */
+.header__nav a{
+    width: 40%;
+}
+
+.header__nav a img{
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.header__nav a img:hover{
+    transform: scale(1.1);
+}
+
+/* Burger menu */
+.navbar-light .navbar-toggler{
+    border: solid var(--myGray) 1px;
+    background-color: var(--myBlue);
+    padding: 1rem;
+    transition: all 0.5s;
+}
+
+.navbar-light .navbar-toggler:hover{
+    border: solid var(--myBlue) 1px;
+    background-color: var(--myGray);
+}
+
+.navbar-light .navbar-toggler-icon{
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-light .navbar-toggler-icon i{
+    color: var(--myGray);
+    font-size: 2rem;
+    transition: all 0.5s;
+}
+
+.navbar-light .navbar-toggler:hover i{
+    color: var(--myBlue);
+}
+
+/* Barra de navegación */
+.header__nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-family: var(--myTitle);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header__nav ul li{
+    padding: 5px;
+    border-bottom: 1px solid var(--myBlue);
+    margin: 0 5px;
+    transition: all 0.5s;
+}
+
+.header__nav ul li a{
+    text-decoration: none;
+    color: var(--myBlue);
+    font-size: 2rem;
+    margin: 0 10px;
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link{
+    text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    color: var(--myBlue);
+}
+
+.header__nav ul li:hover{
+    background-color: var(--myBlue);
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link{
+    color: var(--myGray);
+}
+
+/*===== ESTILOS BANNER (MOBILE) =====*/
+
+/* Contenedor banner */
+.main__title{
+    display: flex;
+    height: 60vh;
+    width: 80%;
+    margin: 20px;
+}
+
+/* Contenedor banner páginas diferentes al index */
+.main__title-views{
+    height: 30vh;
+    width: 100%;
+}
+
+.main__title-views div{
+    width: 100%;
+    text-align: center;
+}
+
+/* Títulos */
+.main__title div.container-fluid{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.main__title div h1{
+    font-family: var(--myTitle);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 0.135em;
+    color: var(--myBlue);
+    text-shadow:
+        -1px    -1px    0   #FFFFFFFF,
+        0       -1px    0   #FFFFFFFF,
+        1px     -1px    0   #FFFFFFFF,
+        1px     0       0   #FFFFFFFF,
+        1px     1px     0   #FFFFFFFF,
+        0       1px     0   #FFFFFFFF,
+        -1px    1px     0   #FFFFFFFF,
+        -1px    0       0   #FFFFFFFF;
+}
+
+.main__title div h2{
+    font-family: var(--myText);
+    color: #FFFFFFFF;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-shadow:
+    -1px    -1px    0   var(--myBlue),
+    0       -1px    0   var(--myBlue),
+    1px     -1px    0   var(--myBlue),
+    1px     0       0   var(--myBlue),
+    1px     1px     0   var(--myBlue),
+    0       1px     0   var(--myBlue),
+    -1px    1px     0   var(--myBlue),
+    -1px    0       0   var(--myBlue);
+}
+
+/* Títulos de las páginas diferentes al index */
+.main__title-views div h1{
+    font-size: 10rem;
+}
+
+.main__title-views-long div h1{
+    font-size: 7rem;
+    margin: 0 10px;
+}
+
+.main__title div h2.main__title-views-back{
+    margin: 0;
+    font-family: var(--myTitle);
+    font-style: normal;
+    position: absolute;
+    text-align: right;
+    font-size: 20rem;
+    right: 0;
+    opacity: 20%;
+    z-index: -1;
+    color: var(--myBlue);
+    text-shadow:
+        -1px    -1px    0   #FFFFFFFF,
+        0       -1px    0   #FFFFFFFF,
+        1px     -1px    0   #FFFFFFFF,
+        1px     0       0   #FFFFFFFF,
+        1px     1px     0   #FFFFFFFF,
+        0       1px     0   #FFFFFFFF,
+        -1px    1px     0   #FFFFFFFF,
+        -1px    0       0   #FFFFFFFF;
+}
+
+.main__title div h2.main__title-views-back-long{
+    font-size: 12rem;
+}
+
+/* Imagen banner index */
+.main__title-img{
+    position: absolute;
+    right: 0;
+    width: 60%;
+    animation: change 5s infinite alternate;
+    z-index: -1;
+}
+
+.main__title-img-above{
+    display: none;
+}
+
+/* Animación imagen banner*/
+@keyframes change{
+    0% { transform: translateY(-20px); }
+}
+
+/*===== ESTILOS SECCIÓN PRINCIPAL (MOBILE) =====*/
+
+/* Contenedor productos + título + botón*/
+.main__products{
+    margin: 0 20px;
+    width: auto;
+}
+
+/* Titulos seccion principal index */
+.main__products h2{
+    font-family: var(--myTitle);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 0.135em;
+    color: var(--myBlue);
+    margin-bottom: 10px;
+}
+
+/* Elineación diferente para segundo título del index */
+.main__products-on-sale{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__products-on-sale h2{
+    width: auto;
+}
+
+/* Contenedor producto individual */
+.main__products-container article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__products-container article img{
+    width: 90%;
+    margin: 10px;
+    transition: all 0.5s;
+}
+
+.main__products-container article:hover img{
+    transform: scale(1.1);
+}
+
+/* Textos de cada producto */
+.main__products-container article h3{
+    margin-top: 3px;
+    text-align: center;
+    font-family: var(--myTitle);
+    font-size: 2rem;
+    color: var(--myBlue);
+    letter-spacing: 0.135em;
+    font-weight: bold;
+}
+
+.main__products-container article h4{
+    font-family: var(--myText);
+    font-size: 1.5rem;
+    color: var(--myBlue);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.main__products-container article em,
+.main__products-container article strong{
+    font-size: 1.5rem;
+    color: var(--myBlue);
+}
+
+/* Botones "Ver más" */
+.main__button{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.main__button a{
+    background-image: linear-gradient(to bottom, var(--myBlue) , var(--myGray));
+    font-family: var(--myTitle);
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--myGray);
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: var(--myBlue) solid 2px;
+    transition: all 0.5s;
+    color: var(--myBlue);
+    white-space: nowrap;
+    text-shadow:
+        -1px    -1px    0   #FFFFFFFF,
+        0       -1px    0   #FFFFFFFF,
+        1px     -1px    0   #FFFFFFFF,
+        1px     0       0   #FFFFFFFF,
+        1px     1px     0   #FFFFFFFF,
+        0       1px     0   #FFFFFFFF,
+        -1px    1px     0   #FFFFFFFF,
+        -1px    0       0   #FFFFFFFF;
+}
+
+.main__button a:hover{
+    opacity: 0.8;
+    background-image: linear-gradient(to top, var(--myBlue) , var(--myBlue));
+    color: var(--myGray);
+    text-shadow:
+        -1px    -1px    0   var(--myBlue),
+        0       -1px    0   var(--myBlue),
+        1px     -1px    0   var(--myBlue),
+        1px     0       0   var(--myBlue),
+        1px     1px     0   var(--myBlue),
+        0       1px     0   var(--myBlue),
+        -1px    1px     0   var(--myBlue),
+        -1px    0       0   var(--myBlue);
+}
+
+/*===== ESTILOS HR (MOBILE) =====*/
+hr{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    opacity: 0.5 !important;
+}
+
+/*===== ESTILOS MÉTODOS DE PAGO (MOBILE) =====*/
+.main__payment{
+    margin: 0 20px;
+    width: auto;
+}
+
+.main__payment-title h2{
+    font-family: var(--myTitle);
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 0.135em;
+    color: var(--myBlue);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main__payment-icons img{
+    transition: all 0.5s;
+}
+
+.main__payment-icons img:hover{
+    transform: scale(1.1);
+}
+
+/*===== ESTILOS QUIÉNES SOMOS (MOBILE) =====*/
+
+/*Imagen*/
+.main__about-us img{
+    width: 100%;
+}
+
+/* Texto quienes somos */
+.main__about-us div p{
+    font-family: var(--myText);
+    font-size: 1.5rem;
+    color: var(--myBlue);
+    margin-bottom: 5px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/*===== ESTILOS CONTÁCTANOS (MOBILE)=====*/
+
+.main__form{
+    width: 90%;
+}
+
+/* Label + Input */
+.main__form div{
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--myBlue);
+}
+
+/* Inputs form */
+.main__form div input,
+.main__form div select,
+.main__form div textarea{
+    border-radius: 20px;
+    border: var(--myBlue) solid 1px;
+    color: var(--myBlue);
+    resize: none;
+    font-size: 1.5rem;
+}
+
+.form-floating>.form-select,
+.form-floating>.form-control,
+.form-floating>.form-control:focus,
+.form-floating>.form-control:not(:placeholder-shown){
+    height: auto;
+    padding: 25px 10px 10px 10px;
+}
+
+.form-floating>.form__textarea,
+.form-floating>.form__textarea:focus{
+    height: auto;
+    padding-top: 30px;
+}
+
+.form-floating>.form-control::placeholder{
+    color: var(--myBlue);
+    font-style: italic;
+    opacity: 80%;
+    font-size: 1rem;
+}
+
+.main__form div input:focus,
+.main__form div select:focus,
+.main__form div textarea:focus,
+.form-control:focus{
+    outline: none;
+    border: var(--myRed) solid 1px;
+    box-shadow: none;
+}
+
+/* Botones form */
+.form__button button{
+    margin: 10px;
+    width: 80%;
+    background-image: linear-gradient(to bottom, var(--myBlue) , var(--myGray));
+    font-family: var(--myTitle);
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--myGray);
+    padding: 10px 0;
+    border-radius: 10px;
+    border: var(--myBlue) solid 2px;
+    transition: all 0.5s;
+    color: var(--myBlue);
+    text-shadow:
+        -1px    -1px    0   #FFFFFFFF,
+        0       -1px    0   #FFFFFFFF,
+        1px     -1px    0   #FFFFFFFF,
+        1px     0       0   #FFFFFFFF,
+        1px     1px     0   #FFFFFFFF,
+        0       1px     0   #FFFFFFFF,
+        -1px    1px     0   #FFFFFFFF,
+        -1px    0       0   #FFFFFFFF;
+}
+
+.form__button button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-image: linear-gradient(to top, var(--myBlue) , var(--myBlue));
+    color: var(--myGray);
+    text-shadow:
+        -1px    -1px    0   var(--myBlue),
+        0       -1px    0   var(--myBlue),
+        1px     -1px    0   var(--myBlue),
+        1px     0       0   var(--myBlue),
+        1px     1px     0   var(--myBlue),
+        0       1px     0   var(--myBlue),
+        -1px    1px     0   var(--myBlue),
+        -1px    0       0   var(--myBlue);
+}
+
+/*===== ESTILOS FOOTER (MOBILE) =====*/
+footer{
+    background-color: var(--myRed);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Logo footer */
+.footer__logo{
+    position: absolute;
+    right: 0;
+    opacity: 0.7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 55%;
+}
+
+.footer__logo img{
+    width: 100%;
+}
+
+/* Navegación footer */
+.footer__links{
+    position: relative;
+    z-index: 2;
+}
+
+.footer__links nav ul{
+    list-style: none;
+    font-family: var(--myTitle);
+    text-align: center;
+}
+
+.footer__links ul li{
+    margin-bottom: 10px;
+}
+
+.footer__links ul li:hover{
+    transform: scale(1.1);
+}
+
+.footer__links ul li a,
+.footer__social p{
+    font-family: var(--myTitle);
+    text-decoration: none;
+    color: var(--myGray);
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: all 0.5;
+    text-align: center;
+}
+
+/* Redes footer */
+.footer__social{
+    position: relative;
+    z-index: 2;
+}
+
+.footer__social div{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__social p{
+    margin-top: 10px;
+}
+
+.footer__social a{
+    text-decoration: none;
+    color: var(--myBlue);
+    border-radius: 50%;
+    border: 2px solid var(--myGray);
+    margin: 10px;
+    padding: 15px 18px;
+    background-color: var(--myBlue);
+    transition: all 0.5s;
+}
+
+.footer__social a:hover{
+    transform: translateY(-10px);
+    background-color: var(--myGray);
+    border: 2px solid var(--myBlue);
+}
+
+.footer__social a i{
+    font-size: 2rem;
+    color: var(--myGray);
+    transition: all 0.5s;
+}
+
+.footer__social a:hover i{
+    color: var(--myBlue);
+}
+
+.footer__social a img{
+    width: 3vw;
+    margin: 10px;
+    transition: all 0.5;
+}
+
+.footer__social a img:hover{
+    transform: scale(1.1);
+}
+
+/* Copyright del footer */
+.footer__copyright{
+    text-align: center;
+    color: var(--myGray);
+    font-family: var(--myTitle);
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/*===== ESTILOS MOBILE (OTHERS) - SM =====*/
+@media only screen and (min-width: 576px){
+
+    /*===== ESTILOS NAV (MOBILE - OTHERS) =====*/
+
+    /* Logo */
+    .header__nav a{
+        width: 30%;
+    }
+
+    /* Barra de navegación */
+    .header__nav ul{
+        flex-direction: row;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header__nav ul li{
+        border-bottom: none;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-light .navbar-nav .nav-item .nav-link{
+        width: auto;
+        text-align: center;
+    }
+
+    /*===== ESTILOS BANNER (MOBILE - OTHERS) =====*/
+
+    /* Títulos */
+
+    /* Títulos de las páginas diferentes al index */
+    .main__title-views div h1{
+        font-size: 15rem;
+    }
+
+    .main__title-views-long div h1{
+        font-size: 10rem;
+    }
+
+    .main__title div h2.main__title-views-back{
+        font-size: 25rem;
+    }
+
+    .main__title div h2.main__title-views-back-long{
+        font-size: 15rem;
+    }
+
+    /* Imagen banner index */
+    .main__title-img{
+        width: 40%;
+    }
+
+    /*===== ESTILOS FOOTER (MOBILE - OTHERS) =====*/
+
+    /* Logo footer */
+    .footer__logo{
+        width: 40%;
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px){
+
+    /*===== ESTILOS NAV (TABLET) =====*/
+
+    /* Logo */
+    .header__nav a{
+        width: 20%;
+        margin: 20px;
+    }
+
+    /*===== ESTILOS BANNER (TABLET) =====*/
+
+    /* Títulos */
+    .main__title div h1{
+        font-size: 4rem;
+    }
+
+    .main__title div h2{
+        font-size: 2rem;
+    }
+
+    /* Contenedor banner páginas diferentes al index */
+    .main__title-views{
+        width: 100%;
+    }
+
+    .main__title-views div{
+        width: 100%;
+    }
+
+    /* Títulos de las páginas diferentes al index */
+    .main__title-views div h1{
+        font-size: 15rem;
+    }
+
+    .main__title div h2.main__title-views-back{
+        font-size: 25rem;
+    }
+
+    .main__title div h2.main__title-views-back-long{
+        font-size: 20rem;
+    }
+
+    /* Imagen banner index */
+    .main__title-img{
+        mix-blend-mode: overlay;
+        right: 5px;
+        width: 35%;
+        opacity: 0.8;
+    }
+
+    .main__title-img-above{
+        display: block;
+        mix-blend-mode: normal;
+        right: 10px;
+        opacity: 1;
+    }
+
+    /*===== ESTILOS SECCIÓN PRINCIPAL (TABLET) =====*/
+    
+    /* Textos de cada producto */
+    .main__products-container article h3{
+        font-size: 2.5rem;
+    }
+
+    /* Botones "Ver más" */
+    .main__button{
+        display: flex;
+        justify-content: center;
+        margin: 40px;
+    }
+
+    .main__button a{
+        font-size: 2.5rem;
+    }
+
+    /*=====ESTILOS HR (TABLET) =====*/
+    hr{
+        width: 85%;
+    }
+
+    /*===== ESTILOS CONTÁCTANOS (TABLET)=====*/
+    .main__form{
+        width: 70%;
+    }
+
+    /*===== ESTILOS FOOTER (TABLET) =====*/
+    footer{
+        background-color: transparent;
+        background-image: url('../assets/img/footer.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* Elmentos del footer menos la sección de copyright */
+    .footer__container{
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Logo footer */
+    .footer__logo{
+        position: static;
+        opacity: 1;
+        width: 10%;
+    }
+
+    /* Navegación footer */
+    .footer__links ul li a,
+    .footer__social p{
+        color: var(--myBlue);
+    }
+
+    /* Copyright del footer */
+    .footer__copyright{
+        padding-bottom: 0;
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px){
+
+    /*===== ESTILOS NAV (LG) =====*/
+    .header__nav{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(to bottom, #000000, transparent);
+    }
+
+    /* Logo */
+    .header__nav a{
+        width: 20%;
+        margin: 0 20px;
+    }
+
+    /* Barra de navegación */
+    .header__nav ul{
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .navbar-light .navbar-nav .nav-link{
+        color: var(--myGray);
+        opacity: 0.8;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active{
+        color: var(--myGray);
+        opacity: 1;
+    }
+    
+    .header__nav ul li:hover{
+        background-color: var(--myGray);
+    }
+    
+    .navbar-light .navbar-nav .nav-item:hover .nav-link{
+        color: var(--myBlue);
+    }
+
+    /*===== ESTILOS BANNER (LG) =====*/
+
+    /* Títulos */
+    .main__title div h1{
+        font-size: 6rem;
+    }
+
+    .main__title div h2{
+        font-size: 2.5rem;
+    }
+
+    /* Contenedor banner páginas diferentes al index */
+    .main__title-views{
+        width: 100%;
+    }
+
+    .main__title-views div{
+        width: 100%;
+    }
+
+    /* Títulos de las páginas diferentes al index */
+    .main__title-views div h1{
+        font-size: 15rem;
+    }
+
+    .main__title div h2.main__title-views-back{
+        font-size: 40rem;
+    }
+
+    .main__title div h2.main__title-views-back-long{
+        font-size: 25rem;
+    }
+
+    /* Imagen banner index */
+    .main__title-img{
+        width: 25%;
+        top: 100px
+    }
+
+    .main__title-img-above{
+        right: 15px;
+    }
+
+    /*===== ESTILOS SECCIÓN PRINCIPAL (LG) =====*/
+
+    /* Titulos seccion principal index */
+    .main__products h2{
+        font-size: 5rem;
+    }
+
+    /* Botones "Ver más" */
+    .main__button a{
+        font-size: 3rem;
+    }
+
+    /*===== ESTILOS MÉTODOS DE PAGO (LG) =====*/
+
+    .main__payment-title h2{
+        font-size: 4rem;
+    }
+
+    /*===== ESTILOS CONTÁCTANOS (LG)=====*/
+    .main__form{
+        width: 50%;
+    }
+
+    /* Botones form */
+    .form__button button{
+        width: 60%;
+    }
+}
+
+/*===== ESTILOS DESKTOP - XL =====*/
+@media only screen and (min-width: 1024px){
+    
+    /*===== ESTILOS NAV (DESKTOP) =====*/
+    /* Logo */
+    .header__nav a{
+        width: 15%;
+    }
+}
