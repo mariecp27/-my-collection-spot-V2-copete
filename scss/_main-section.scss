@@ -1,0 +1,131 @@
+/* Contenedor productos + título + botón*/
+.main__products {
+    margin: 0 20px;
+    width: auto;
+
+    /* Titulos seccion principal index */
+    h2 {
+        font-family: $myTitle;
+        font-size: 3rem;
+        font-weight: 900;
+        margin: 0;
+        letter-spacing: 0.135em;
+        color: $myBlue;
+        margin-bottom: 10px;
+    }
+
+    /* Elineación diferente para segundo título del index */
+    &-on-sale {
+        display: flex;
+        justify-content: flex-end;
+
+        h2 {
+            width: auto;
+        }
+    }
+
+    /* Contenedor producto individual */
+    &-container article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 90%;
+            margin: 10px;
+            transition: all 0.5s;
+        }
+
+        
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Textos de cada producto */
+        h3 {
+            margin-top: 3px;
+            text-align: center;
+            font-family: $myTitle;
+            font-size: 2rem;
+            color: $myBlue;
+            letter-spacing: 0.135em;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-family: $myText;
+            font-size: 1.5rem;
+            color: $myBlue;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        em,
+        & strong {
+            font-size: 1.5rem;
+            color: $myBlue;
+        }
+    }
+}
+
+/* Botones "Ver más" */
+.main__button {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+
+    a {
+        background-image: linear-gradient(to bottom, $myBlue, $myGray);
+        font-family: $myTitle;
+        font-size: 2rem;
+        text-decoration: none;
+        color: $myGray;
+        padding: 10px 40px;
+        border-radius: 10px;
+        border: $myBlue solid 2px;
+        transition: all 0.5s;
+        color: $myBlue;
+        white-space: nowrap;
+        @include myTextShadow;
+
+        &:hover{
+            opacity: 0.8;
+            background-image: linear-gradient(to top, $myBlue , $myBlue);
+            color: $myGray;
+            @include myTextShadowReverse;
+        }
+    }
+}
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px){
+    /* Textos de cada producto */
+    .main__products-container article h3 {
+        font-size: 2.5rem;
+    }
+
+    /* Botones "Ver más" */
+    .main__button {
+        display: flex;
+        justify-content: center;
+        margin: 40px;
+
+        a {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px){
+    /* Titulos seccion principal index */
+    .main__products h2{
+        font-size: 5rem;
+    }
+
+    /* Botones "Ver más" */
+    .main__button a{
+        font-size: 3rem;
+    }
+}
