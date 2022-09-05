@@ -4,6 +4,7 @@
     height: 60vh;
     width: 80%;
     margin: 20px;
+    pointer-events: none;
 
     /* Contenedor banner páginas diferentes al index */
     &-views {
@@ -46,11 +47,11 @@
     }
 
     /* Títulos de las páginas diferentes al index */
-    &-views div h1 {
+    &-views div.container-fluid h1 {
         font-size: 10rem;
     }
 
-    &-views-long div h1{
+    &-views-long div.container-fluid h1{
         font-size: 7rem;
         margin: 0 10px;
     }
@@ -67,10 +68,10 @@
         z-index: -1;
         color: $myBlue;
         @include myTextShadow;
-    }
 
-    &-long{
-        font-size: 12rem;
+        &-long{
+            font-size: 12rem;
+        }
     }
 
     /* Imagen banner index */
@@ -98,11 +99,11 @@
     /* Títulos de las páginas diferentes al index */
     .main__title {
         &-views {
-            div h1 {
+            div.container-fluid h1 {
                 font-size: 15rem;
             }
     
-            &-long div h1{
+            &-long div.container-fluid h1{
                 font-size: 10rem;
             }
         } 
@@ -140,7 +141,7 @@
         &-views {
             width: 100%;
 
-            div {
+            div.container-fluid {
                 width: 100%;
 
                 /* Títulos de las páginas diferentes al index */
@@ -193,7 +194,7 @@
         &-views {
             width: 100%;
 
-            div {
+            div.container-fluid {
                 width: 100%;
 
                 /* Títulos de las páginas diferentes al index */

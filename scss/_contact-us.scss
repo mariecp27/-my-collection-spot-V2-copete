@@ -1,0 +1,102 @@
+.main__form {
+    width: 90%;
+
+    /* Label + Input */
+    div {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        color: $myBlue;
+
+        /* Inputs form */
+        & input,
+        & select,
+        & textarea {
+            border-radius: 20px;
+            border: $myBlue solid 1px;
+            color: $myBlue;
+            resize: none;
+            font-size: 1.5rem;
+
+            &:focus {
+                outline: none;
+                border: $myRed solid 1px;
+                box-shadow: none;
+            }
+        }
+    }
+
+    /* Botones form */
+    .form__button button {
+        margin: 10px;
+        width: 80%;
+        background-image: linear-gradient(to bottom, $myBlue , $myGray);
+        font-family: $myTitle;
+        font-size: 2rem;
+        text-decoration: none;
+        color: $myGray;
+        padding: 10px 0;
+        border-radius: 10px;
+        border: $myBlue solid 2px;
+        @include myTransition;
+        color: $myBlue;
+        @include myTextShadow;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+            background-image: linear-gradient(to top, $myBlue , $myBlue);
+            color: $myGray;
+            @include myTextShadowReverse;
+        }
+    }
+}
+
+/* Estilos desde Bootstrap */
+.form-floating {
+    &>.form-select,
+    &>.form-control,
+    &>.form-control:focus,
+    &>.form-control:not(:placeholder-shown){
+        height: auto;
+        padding: 25px 10px 10px 10px;
+    }
+
+    &>.form__textarea,
+    &>.form__textarea:focus{
+        height: auto;
+        padding-top: 30px;
+    }
+
+    &>.form-control::placeholder{
+        color: $myBlue;
+        font-style: italic;
+        opacity: 80%;
+        font-size: 1rem;
+    }
+
+    .form-control:focus{
+        outline: none;
+        border: $myRed solid 1px;
+        box-shadow: none;
+    }
+}
+
+
+/*===== ESTILOS TABLET - MD =====*/
+@media only screen and (min-width: 768px){
+    .main__form {
+        width: 70%;
+    }
+}
+
+/*===== ESTILOS LG =====*/
+@media only screen and (min-width: 992px){
+    .main__form {
+        width: 50%;
+
+        /* Botones form */
+        .form__button button{
+            width: 60%;
+        }
+    }
+}
