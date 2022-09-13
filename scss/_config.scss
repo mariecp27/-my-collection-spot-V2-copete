@@ -1,8 +1,11 @@
 /* Paleta de colores y fuente seleccionadas */
-$myBlue: #011627;
-$myGray: #FDFFFC;
-$myRed: #F71735;
-$myGreenBlue: #41EAD4;
+$colors: (
+    'myBlue': #011627,
+    'myGray': #FDFFFC,
+    'myRed': #F71735,
+    'myGreenBlue': #41EAD4,
+);
+
 $myTitle: 'Bebas Neue', cursive;
 $myText: 'Lato', sans-serif;
 
@@ -21,7 +24,7 @@ html{
     background: url('../assets/img/background.svg');
     background-repeat: no-repeat;
     background-position: top;
-    font-family: var(--myText);
+    font-family: $myText;
     overflow-x: hidden;
 }
 
@@ -68,12 +71,12 @@ hr {
 
 @mixin myTextShadowReverse {
     text-shadow:
-    -1px    -1px    0   $myBlue,
-    0       -1px    0   $myBlue,
-    1px     -1px    0   $myBlue,
-    1px     0       0   $myBlue,
-    1px     1px     0   $myBlue,
-    0       1px     0   $myBlue,
-    -1px    1px     0   $myBlue,
-    -1px    0       0   $myBlue;
+    -1px    -1px    0   map-get($colors, myBlue),
+    0       -1px    0   map-get($colors, myBlue),
+    1px     -1px    0   map-get($colors, myBlue),
+    1px     0       0   map-get($colors, myBlue),
+    1px     1px     0   map-get($colors, myBlue),
+    0       1px     0   map-get($colors, myBlue),
+    -1px    1px     0   map-get($colors, myBlue),
+    -1px    0       0   map-get($colors, myBlue);
 }

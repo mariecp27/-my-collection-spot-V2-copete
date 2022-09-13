@@ -31,20 +31,20 @@
 
         li {
             padding: 5px;
-            border-bottom: 1px solid $myBlue;
+            border-bottom: 1px solid map-get($colors, myBlue);
             margin: 0 5px;
             @include myTransition;
 
             a {
                 text-decoration: none;
-                color: $myBlue;
+                color: map-get($colors, myBlue);
                 font-size: 2rem;
                 margin: 0 10px;
                 width: 100%;
             }
 
             &:hover {
-                background-color: $myBlue;
+                background-color: map-get($colors, myBlue);
             }
         }
     }
@@ -53,14 +53,14 @@
 /* Burger menu */
 .navbar-light {
     .navbar-toggler {
-        border: solid $myGray 1px;
-        background-color: $myBlue;
+        border: solid map-get($colors, myGray) 1px;
+        background-color: map-get($colors, myBlue);
         padding: 1rem;
         @include myTransition;
 
         &:hover {
-            border: solid $myBlue 1px;
-            background-color: $myGray;
+            border: solid map-get($colors, myBlue) 1px;
+            background-color: map-get($colors, myGray);
         }
 
         &-icon {
@@ -70,12 +70,12 @@
             align-items: center;
 
             i {
-                color: $myGray;
+                color: map-get($colors, myGray);
                 font-size: 2rem;
                 @include myTransition;
 
                 &:hover {
-                    color: $myBlue;
+                    color: map-get($colors, myBlue);
                 }
             }
         }
@@ -87,11 +87,11 @@
         }
 
         .nav-link.active{
-            color: $myBlue;
+            color: map-get($colors, myBlue);
         }
 
         .nav-item:hover .nav-link{
-            color: $myGray;
+            color: map-get($colors, myGray);
         }
     }
 }
@@ -158,7 +158,7 @@
             margin: 0 20px;
 
             li:hover{
-                background-color: $myGray;
+                background-color: map-get($colors, myGray);
             }
         }
     }
@@ -167,17 +167,17 @@
     .navbar-light {
         .navbar-nav {
             .nav-link {
-                color: $myGray;
+                color: map-get($colors, myGray);
                 opacity: 0.8;
 
                 &.active {
-                    color: $myGray;
+                    color: map-get($colors, myGray);
                     opacity: 1;
                 }
             }
 
             .nav-item:hover .nav-link {
-                color: $myBlue;
+                color: map-get($colors, myBlue);
             }
         } 
     }

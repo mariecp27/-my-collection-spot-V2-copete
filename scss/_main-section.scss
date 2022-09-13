@@ -10,7 +10,7 @@
         font-weight: 900;
         margin: 0;
         letter-spacing: 0.135em;
-        color: $myBlue;
+        color: map-get($colors, myBlue);
         margin-bottom: 10px;
     }
 
@@ -48,7 +48,7 @@
             text-align: center;
             font-family: $myTitle;
             font-size: 2rem;
-            color: $myBlue;
+            color: map-get($colors, myBlue);
             letter-spacing: 0.135em;
             font-weight: bold;
         }
@@ -56,7 +56,7 @@
         h4 {
             font-family: $myText;
             font-size: 1.5rem;
-            color: $myBlue;
+            color: map-get($colors, myBlue);
             margin-bottom: 5px;
             font-weight: bold;
         }
@@ -64,7 +64,7 @@
         em,
         & strong {
             font-size: 1.5rem;
-            color: $myBlue;
+            color: map-get($colors, myBlue);
         }
     }
 }
@@ -74,27 +74,26 @@
     display: flex;
     justify-content: center;
     margin: 40px;
+}
 
-    a {
-        background-image: linear-gradient(to bottom, $myBlue, $myGray);
-        font-family: $myTitle;
-        font-size: 2rem;
-        text-decoration: none;
-        color: $myGray;
-        padding: 10px 40px;
-        border-radius: 10px;
-        border: $myBlue solid 2px;
-        transition: all 0.5s;
-        color: $myBlue;
-        white-space: nowrap;
-        @include myTextShadow;
+.main__button-link {
+    background-image: linear-gradient(to bottom, map-get($colors, myBlue), map-get($colors, myGray));
+    font-family: $myTitle;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: map-get($colors, myBlue) solid 2px;
+    color: map-get($colors, myBlue);
+    white-space: nowrap;
+    @include myTextShadow;
+    @include myTransition;
 
-        &:hover{
-            opacity: 0.8;
-            background-image: linear-gradient(to top, $myBlue , $myBlue);
-            color: $myGray;
-            @include myTextShadowReverse;
-        }
+    &:hover{
+        opacity: 0.8;
+        background-image: linear-gradient(to top, map-get($colors, myBlue) , map-get($colors, myBlue));
+        color: map-get($colors, myGray);
+        @include myTextShadowReverse;
     }
 }
 
@@ -110,22 +109,22 @@
         display: flex;
         justify-content: center;
         margin: 40px;
+    }
 
-        a {
-            font-size: 2.5rem;
-        }
+    .main__button-link {
+        font-size: 2.5rem;
     }
 }
 
 /*===== ESTILOS LG =====*/
 @media only screen and (min-width: 992px){
     /* Titulos seccion principal index */
-    .main__products h2{
+    .main__products h2 {
         font-size: 5rem;
     }
 
     /* Botones "Ver más" */
-    .main__button a{
+    .main__button-link {
         font-size: 3rem;
     }
 }

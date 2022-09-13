@@ -8,7 +8,7 @@
         font-weight: 900;
         margin: 0;
         letter-spacing: 0.135em;
-        color: $myBlue;
+        color: map-get($colors, myBlue);
         margin-bottom: 10px;
         text-align: center;
     }

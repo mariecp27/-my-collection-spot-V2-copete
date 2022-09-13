@@ -1,5 +1,5 @@
 footer{
-    background-color: $myRed;
+    background-color: map-get($colors, myRed);
     margin-top: 20px;
     padding: 10px;
 }
@@ -40,7 +40,7 @@ footer{
                 a {
                     font-family: $myTitle;
                     text-decoration: none;
-                    color: $myGray;
+                    color: map-get($colors, myGray);
                     font-size: 2rem;
                     margin: 0 10px;
                     @include myTransition;
@@ -63,7 +63,7 @@ footer{
         p {
             font-family: $myTitle;
             text-decoration: none;
-            color: $myGray;
+            color: map-get($colors, myGray);
             font-size: 2rem;
             margin: 0 10px;
             @include myTransition;
@@ -73,27 +73,27 @@ footer{
     
         a {
             text-decoration: none;
-            color: $myBlue;
+            color: map-get($colors, myBlue);
             border-radius: 50%;
-            border: 2px solid $myGray;
+            border: 2px solid map-get($colors, myGray);
             margin: 10px;
             padding: 15px 18px;
-            background-color: $myBlue;
+            background-color: map-get($colors, myBlue);
             @include myTransition;
     
             &:hover{
                 transform: translateY(-10px);
-                background-color: $myGray;
-                border: 2px solid $myBlue;
+                background-color: map-get($colors, myGray);
+                border: 2px solid map-get($colors, myBlue);
     
                 i {
-                    color: $myBlue;
+                    color: map-get($colors, myBlue);
                 }
             }
     
             i {
                 font-size: 2rem;
-                color: $myGray;
+                color: map-get($colors, myGray);
                 @include myTransition;
             }
     
@@ -112,7 +112,7 @@ footer{
     /* Copyright del footer */
     &__copyright{
         text-align: center;
-        color: $myGray;
+        color: map-get($colors, myGray);
         font-family: $myTitle;
         font-size: 1.5rem;
         padding-bottom: 10px;
@@ -157,7 +157,7 @@ footer{
         /* Navegación footer */
         &__links nav ul li a,
         &__social p{
-            color: $myBlue;
+            color: map-get($colors, myBlue);
         }
 
         /* Copyright del footer */

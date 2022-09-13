@@ -14,7 +14,7 @@ html {
   background: url("../assets/img/background.svg");
   background-repeat: no-repeat;
   background-position: top;
-  font-family: var(--myText);
+  font-family: "Lato", sans-serif;
   overflow-x: hidden; }
 
 .html__views {
@@ -371,24 +371,24 @@ hr {
   display: flex;
   justify-content: center;
   margin: 40px; }
-  .main__button a {
-    background-image: linear-gradient(to bottom, #011627, #FDFFFC);
-    font-family: "Bebas Neue", cursive;
-    font-size: 2rem;
-    text-decoration: none;
+
+.main__button-link, .main__form .form__button button {
+  background-image: linear-gradient(to bottom, #011627, #FDFFFC);
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: #011627 solid 2px;
+  color: #011627;
+  white-space: nowrap;
+  text-shadow: -1px    -1px    0   #FFFFFFFF, 0       -1px    0   #FFFFFFFF, 1px     -1px    0   #FFFFFFFF, 1px     0       0   #FFFFFFFF, 1px     1px     0   #FFFFFFFF, 0       1px     0   #FFFFFFFF, -1px    1px     0   #FFFFFFFF, -1px    0       0   #FFFFFFFF;
+  transition: all 0.5s; }
+  .main__button-link:hover, .main__form .form__button button:hover {
+    opacity: 0.8;
+    background-image: linear-gradient(to top, #011627, #011627);
     color: #FDFFFC;
-    padding: 10px 40px;
-    border-radius: 10px;
-    border: #011627 solid 2px;
-    transition: all 0.5s;
-    color: #011627;
-    white-space: nowrap;
-    text-shadow: -1px    -1px    0   #FFFFFFFF, 0       -1px    0   #FFFFFFFF, 1px     -1px    0   #FFFFFFFF, 1px     0       0   #FFFFFFFF, 1px     1px     0   #FFFFFFFF, 0       1px     0   #FFFFFFFF, -1px    1px     0   #FFFFFFFF, -1px    0       0   #FFFFFFFF; }
-    .main__button a:hover {
-      opacity: 0.8;
-      background-image: linear-gradient(to top, #011627, #011627);
-      color: #FDFFFC;
-      text-shadow: -1px -1px 0 #011627, 0 -1px 0 #011627, 1px -1px 0 #011627, 1px 0 0 #011627, 1px 1px 0 #011627, 0 1px 0 #011627, -1px 1px 0 #011627, -1px 0 0 #011627; }
+    text-shadow: -1px -1px 0 #011627, 0 -1px 0 #011627, 1px -1px 0 #011627, 1px 0 0 #011627, 1px 1px 0 #011627, 0 1px 0 #011627, -1px 1px 0 #011627, -1px 0 0 #011627; }
 
 /*===== ESTILOS TABLET - MD =====*/
 @media only screen and (min-width: 768px) {
@@ -400,8 +400,8 @@ hr {
     display: flex;
     justify-content: center;
     margin: 40px; }
-    .main__button a {
-      font-size: 2.5rem; } }
+  .main__button-link, .main__form .form__button button {
+    font-size: 2.5rem; } }
 
 /*===== ESTILOS LG =====*/
 @media only screen and (min-width: 992px) {
@@ -409,7 +409,7 @@ hr {
   .main__products h2 {
     font-size: 5rem; }
   /* Botones "Ver más" */
-  .main__button a {
+  .main__button-link, .main__form .form__button button {
     font-size: 3rem; } }
 
 .main__payment {
@@ -451,45 +451,31 @@ hr {
   width: 90%;
   /* Label + Input */
   /* Botones form */ }
-  .main__form div {
+  .main__form .main__form-pair {
     margin-bottom: 15px;
     font-size: 1.5rem;
     color: #011627;
     /* Inputs form */ }
-    .main__form div input,
-    .main__form div select,
-    .main__form div textarea {
+    .main__form .main__form-pair input,
+    .main__form .main__form-pair select,
+    .main__form .main__form-pair textarea {
       border-radius: 20px;
       border: #011627 solid 1px;
       color: #011627;
       resize: none;
       font-size: 1.5rem; }
-      .main__form div input:focus,
-      .main__form div select:focus,
-      .main__form div textarea:focus {
+      .main__form .main__form-pair input:focus,
+      .main__form .main__form-pair select:focus,
+      .main__form .main__form-pair textarea:focus {
         outline: none;
         border: #F71735 solid 1px;
         box-shadow: none; }
   .main__form .form__button button {
     margin: 10px;
     width: 80%;
-    background-image: linear-gradient(to bottom, #011627, #FDFFFC);
-    font-family: "Bebas Neue", cursive;
-    font-size: 2rem;
-    text-decoration: none;
-    color: #FDFFFC;
-    padding: 10px 0;
-    border-radius: 10px;
-    border: #011627 solid 2px;
-    transition: all 0.5s;
-    color: #011627;
-    text-shadow: -1px    -1px    0   #FFFFFFFF, 0       -1px    0   #FFFFFFFF, 1px     -1px    0   #FFFFFFFF, 1px     0       0   #FFFFFFFF, 1px     1px     0   #FFFFFFFF, 0       1px     0   #FFFFFFFF, -1px    1px     0   #FFFFFFFF, -1px    0       0   #FFFFFFFF; }
+    padding: 10px 0; }
     .main__form .form__button button:hover {
-      cursor: pointer;
-      opacity: 0.8;
-      background-image: linear-gradient(to top, #011627, #011627);
-      color: #FDFFFC;
-      text-shadow: -1px -1px 0 #011627, 0 -1px 0 #011627, 1px -1px 0 #011627, 1px 0 0 #011627, 1px 1px 0 #011627, 0 1px 0 #011627, -1px 1px 0 #011627, -1px 0 0 #011627; }
+      cursor: pointer; }
 
 /* Estilos desde Bootstrap */
 .form-floating > .form-select,
