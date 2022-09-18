@@ -392,9 +392,12 @@ hr {
 
 /*===== ESTILOS TABLET - MD =====*/
 @media only screen and (min-width: 768px) {
-  /* Textos de cada producto */
-  .main__products-container article h3 {
-    font-size: 2.5rem; }
+  .main__products-container article {
+    /* Textos de cada producto */ }
+    .main__products-container article img {
+      width: 80%; }
+    .main__products-container article h3 {
+      font-size: 2.5rem; }
   /* Botones "Ver más" */
   .main__button {
     display: flex;
@@ -406,8 +409,11 @@ hr {
 /*===== ESTILOS LG =====*/
 @media only screen and (min-width: 992px) {
   /* Titulos seccion principal index */
-  .main__products h2 {
-    font-size: 5rem; }
+  .main__products {
+    width: 90%;
+    margin: 0 auto; }
+    .main__products h2 {
+      font-size: 5rem; }
   /* Botones "Ver más" */
   .main__button-link, .main__form .form__button button {
     font-size: 3rem; } }

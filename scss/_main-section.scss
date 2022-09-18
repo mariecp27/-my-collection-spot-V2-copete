@@ -99,10 +99,17 @@
 
 /*===== ESTILOS TABLET - MD =====*/
 @media only screen and (min-width: 768px){
-    /* Textos de cada producto */
-    .main__products-container article h3 {
-        font-size: 2.5rem;
-    }
+
+    .main__products-container article {
+        img {
+            width: 80%;
+        }
+        
+        /* Textos de cada producto */
+        h3 {
+            font-size: 2.5rem;
+        }
+    } 
 
     /* Botones "Ver más" */
     .main__button {
@@ -119,9 +126,14 @@
 /*===== ESTILOS LG =====*/
 @media only screen and (min-width: 992px){
     /* Titulos seccion principal index */
-    .main__products h2 {
-        font-size: 5rem;
-    }
+    .main__products {
+        width: 90%;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 5rem;
+        }
+    } 
 
     /* Botones "Ver más" */
     .main__button-link {
